@@ -1,0 +1,33 @@
+/* Usamos o Reset para reesetar configurações predefinidas pelos navegadores em um site */
+
+* {
+    /* seletor geral do HTML, ou seja, todos os elementos*/
+    margin: 0;
+    /* Tita todas as margens do nosso documento HTML*/
+    padding: 0;
+    /* Tita todas as margens do nosso documento HTML*/
+    border: none;
+    /* Tira todas as bordas dos elementos do nosso site */
+    outline: none;
+    /* remove o contorno padrão que os navegadores aplicam a elementos que estão em foco */
+    box-sizing: border-box;
+    /* altera a maneira como o navegador calcula a largura e a altura de um elemento, incluindo seu preenchimento (padding) e borda (border) no valor total */
+}
+
+a {
+    text-decoration: none;
+    /* Tira toda a decoração de um link*/
+    color: #ffffff;
+    /* Mantém todos os links com a cor Branca para ter o maior controle */
+    /* "#ffffff" é a cor banca em Hexadecimal*/
+}
+
+ul {
+    list-style: none;
+    /* Tira a predefinição de lista dos navegadores  */
+}
+
+img {
+    max-width: 100%;
+    /* Coloca o tamanho máximo de uma imagem para ficar a 100% da tela */
+}

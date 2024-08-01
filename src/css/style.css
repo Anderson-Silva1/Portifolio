@@ -1,0 +1,253 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Oswald:wght@200..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+    font-family: "Open Sans";
+}
+
+html {
+    color: #ffffff;
+    scroll-behavior: smooth;
+}
+
+body {
+    background: linear-gradient(150deg, #000000, #9e00ff);
+    background-size: 120% 120%;
+    font-family: "Poppins", sans-serif;
+    margin: 0 auto;
+    max-width: 1120px;
+}
+
+.cabecalho {
+    display: flex;
+    /* Coloca os alementos um ao lado do outro */
+    justify-content: space-between;
+    /* Espaço entre os elementos de uma página, colocando eles o mais separado possível*/
+    align-items: center;
+    /* Centraliza o height dos elementos */
+    padding: 30px 15px;
+}
+
+.cabecalho .logo {
+    /* Podemos chamar um elemento pai antes de um elemento filho para deixarmos o nosso codigo mais legível e mais específico... se usarmos apenas o seletor ".logo", se tiver outra classe em um outro lugar do meu codigo com esse mesmo nome "logo", irá erstilizar tbm. Conseguimos fazer essa mescla de seletores separando eles apenas por um espaço */
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    /* Arredonda nosso elemento */
+    border: 2px solid #ffffff;
+    /* Vai criar Bordas. tamanho - Tipo - Cor*/
+    text-decoration: underline;
+    /* Colica um Underline no texto*/
+    text-align: center;
+    /* Geralmente não irá funcionar quando for um elemento, a não ser que seja texto, vai alinhar ao centro*/
+    line-height: 55px;
+    /* define a altura de cada linha de texto dentro de um elemento de nível de bloco. Ela determina a quantidade de espaço acima e abaixo dos elementos de linha. Essa propriedade pode ser especificada usando várias unidades, como pixels, ems ou porcentagens. Um valor maior de line-height cria mais espaço entre as linhas de texto, enquanto um valor menor torna as linhas mais compactas. É comumente usado para melhorar a legibilidade e estética do texto em páginas da web.*/
+    font-family: "Raleway", sans-serif;
+    /* Modifica a fonte*/
+}
+
+.cabecalho a:hover .logo {
+        color: #9443d8;
+        border: 2px solid #9443d8;
+}
+
+.cabecalho .menu ul li a {
+    font-size: 20px;
+    text-transform: capitalize;
+    /* Tranforma a primeira letra de cada palavra em Maiúscula*/
+    padding: 10px 20px;
+    /* Define um espaçamento interno*/
+    transition: 0.2s;
+    /* Define uma transição de 0.02s, animação, iremos aprender mais pra frente*/
+}
+
+.cabecalho .menu ul li a:hover {
+    background-color: #9443d8;
+    color: #ffffff;
+    border-radius: 50px;
+    /* Arredonda a borda*/
+}
+
+.home {
+    display: flex;
+    /*  transforma um elemento em um contêiner flexível, permitindo um layout flexível para seus itens filhos. Quando aplicada a um elemento pai, essa propriedade permite que seus filhos se ajustem automaticamente ao tamanho do contêiner pai e reorganizem-se de acordo com as regras de layout flexíveis. */
+    min-height: calc(100vh - 125px);
+    /* 100vh é o tamanho completo de uma tela... min-height é a altura mínima de um elemento... calc é uma função em css que possibilita fazer cálculos, nesse caso estamos subtraindo o tamanho do nosso cabeçalho, para ficar o cabeçalho e a seção-informações dentro da primeira tela do usuário e mais nada*/
+    align-items: center;
+    /* Centraliza elementos*/
+    gap: 50px;
+    /* Vai definir uma separação de 50px entre os elementos de uma página que tiverem esse atributo*/
+    justify-content: space-between;
+}
+
+.home .informacoes {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    letter-spacing: 2px;
+    padding: 0 0 0 15px;
+    max-width: 50%;
+}
+
+.home .informacoes h1 {
+    font-family: "Releway", sans-serif;
+    font-size: 45px;
+    margin-bottom: 20px;
+}
+
+.home .informacoes p {
+    font-family: "Releway", sans-serif;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.link-estacio {
+    text-decoration: underline;
+    transition: 0.6s;
+}
+
+.link-estacio:hover {
+    color: #927ea3;
+    font-size: 26px;
+}
+
+.home .informacoes .rede-social {
+    display: flex;
+    gap: 20px;
+}
+
+.home .informacoes .rede-social a i {
+    border: 1px solid #ffffff;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    padding: 10px;
+    text-align: center;
+    font-size: 26px;
+    transition: 0.3s;
+}
+
+.home .informacoes .rede-social a i:hover {
+    color: #9443d8;
+    border: 1px solid #9443d8;
+    transform: scale(1.1);
+}
+
+.home .conteiner-foto .foto {
+    max-width: 450px;
+    border-radius: 50%;
+
+}
+
+.home .conteiner-foto img {
+    width: 100%;
+    border-radius: 50%;
+    background-size: cover;
+}
+
+.home .conteiner-foto .foto.sombra-interna {
+    background: linear-gradient(to right, #8a35c8, #18c063, #00eea2);
+    background-size: 180% 108%;
+    animation: gradient-animation 5s ease infinite;
+}
+
+.projetos {
+    padding: 70px 0;
+} 
+/*  */
+.projetos #meus-projetos {
+    text-align: center;
+    padding: 60px 0;
+    font-size: 45px;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+/*  */
+.projetos .conteiner-projetos {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+    justify-content: center;
+}
+/*  */
+.projetos .projeto {
+    max-width: 260px;
+    max-height: 500px;
+    position: relative;
+    display: none;
+}
+/*  */
+.projetos .projeto.ativo {
+    display: block;
+}
+
+.projetos .projeto img {
+    height: 100%;
+}
+
+.projetos .projeto h3 {
+    background-color: #040203;
+    width: 100%;
+    padding-left: 20px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    position: absolute;
+    bottom: 0px;
+}
+
+.projetos .projeto .informacoes-projeto {
+    background-color: #040203;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    font-weight: 600;
+    opacity: 0;
+    transition: 0.3s;
+    padding: 20px;
+}
+
+.projetos .conteiner-projetos .projeto:hover .informacoes-projeto {
+    opacity: 0.7;
+    background-color: #000000;
+}
+
+.projetos .btn-mostrar-projetos {
+    background: none;
+    border: 1px solid #b22b2b;
+    border-radius: 15px;
+    color: #ffffff;
+    width: 180px;
+    padding: 20px;
+    font-size: 18px;
+    font-weight: 600;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.projetos .btn-mostrar-projetos:hover {
+    background-color: #9443d8;
+    transition: 0.3s;
+}
+
+.projetos .btn-mostrar-projetos.remover {
+    display: none;
+}
+
+@keyframes gradient-animation {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+        ;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
